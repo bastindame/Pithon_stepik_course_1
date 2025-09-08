@@ -1,0 +1,21 @@
+s = input()
+if s[0] == '@':
+    print('@ is True')
+else:
+    print('@ is False')
+if 5 <= len(s) <= 15:
+    print('len is True')
+else:
+    print('len is False')
+if s[1:].isalnum():
+    print('isalnum is True')
+else:
+    print('isalnum is False')
+if s[1:].islower():
+    print('islower is True')
+else:
+    print('islower is False')
+if s[1:].isdigit:
+    print('isdigit is True')
+else:
+    print('isdigit is False')
