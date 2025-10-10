@@ -1,0 +1,19 @@
+# объявление функции
+def is_password_good(password):
+    flag = True
+    if len(password) < 8:
+        flag = False
+    elif password.lower == password:
+        flag = False
+    elif password.upper == password:
+        flag = False
+    for c in password.split():
+        if c not in (1234567890):
+            flag = False
+            break
+            
+# считываем данные
+txt = input()
+
+# вызываем функцию
+print(is_password_good(txt))
