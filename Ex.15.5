@@ -1,15 +1,17 @@
-# cook your dish here
-rus_upper_alphabet = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-rus_lower_alphabet = "абвгдежзийклмнопрстуфхцчшщъыьэюя"
-
-text = 'Блажен, кто верует, тепло ему на свете!'.lower()
-print(text)
-new = ''
+upper_ru = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ' 
+lower_ru = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
+text = 'Блажен, кто верует, тепло ему на свете!'
+s = ''
 for i in range(len(text)):
     if text[i].isalpha():
-        
-        place = rus_lower_alphabet.index(text[i])
-        index = (place + 10) % 32
-        new += rus_lower_alphabet[index]
-
-print(new)
+        if text[i] in upper_ru:
+            place = upper_ru.index(text[i])
+            index = (place + 10) % 32
+            s += upper_ru[index]
+        elif text[i] in lower_ru:
+            place = lower_ru.index(text[i])
+            index = (place + 10) % 32
+            s += lower_ru[index]
+    else:
+        s += text[i]
+print(s)
